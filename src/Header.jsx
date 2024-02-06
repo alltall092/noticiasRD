@@ -39,23 +39,23 @@ return(<>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} href="/"><i className="fa fa-home"></i>Inicio</Nav.Link>
-            <Nav.Link as={Link}  href="/noticias"><i className="fa-solid fa-newspaper"></i>Noticias</Nav.Link>
-            <Nav.Link as={Link}  href="/contacto"><i className="fa-solid fa-address-book"></i>Contacto</Nav.Link>
-            <Nav.Link  as={Link} href="/acerca"><i className="fa-solid fa-circle-info"></i>Acerca</Nav.Link>
+            <Nav.Link as={Link} to="/"><i className="fa fa-home"></i>Inicio</Nav.Link>
+            <Nav.Link as={Link}  to="/noticias"><i className="fa-solid fa-newspaper"></i>Noticias</Nav.Link>
+            <Nav.Link as={Link}  to="/contacto"><i className="fa-solid fa-address-book"></i>Contacto</Nav.Link>
+            <Nav.Link  as={Link} to="/acerca"><i className="fa-solid fa-circle-info"></i>Acerca</Nav.Link>
            
             
           </Nav>
           <Nav>
       {isLoggedIn ? (
         <>
-          <Nav.Link as={Link}  href="/dashboard"><i className="fa-solid fa-user"></i>{user}</Nav.Link>
+          <Nav.Link as={Link}  to="/dashboard"><i className="fa-solid fa-user"></i>{user}</Nav.Link>
           <Nav.Link  as={Link} onClick={handleLogout}><i className="fa-solid fa-arrow-right-from-bracket"></i>Cerrar Sesión</Nav.Link>
         </>
       ) : (
         <>
-          <Nav.Link as={Link}  href="/login"><i className="fa-solid fa-right-to-bracket"></i>Iniciar Sesión</Nav.Link>
-          <Nav.Link  as={Link} href="/registrarse"><i className="fa-solid fa-registered"></i>Registrarse</Nav.Link>
+          <Nav.Link as={Link}  to="/login"><i className="fa-solid fa-right-to-bracket"></i>Iniciar Sesión</Nav.Link>
+          <Nav.Link  as={Link} to="/registrarse"><i className="fa-solid fa-registered"></i>Registrarse</Nav.Link>
         </>
       )}
     </Nav>
