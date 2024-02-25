@@ -21,8 +21,10 @@ import NoticiasRecientes from './NoticiasRecientes';
 import DetalleNoticias from './DetalleNoticias';
 import Form from './Form';
 import Roles from './Roles';
+import Music from './Music';
+
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <>
     <Router>
@@ -41,7 +43,10 @@ function App() {
         <Route path="detalles/:id" element={<DetalleNoticias/>}/>
         <Route path="form" element={<Form/>}/>
         <Route path="roles" element={<Roles/>}/>
-        <Route  path="login" element={ <Login  loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
+        <Route path="musica" element={<Music/>}/>
+      
+        <Route  path="login" element={ <Login  loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>}  />
+        
         
         <Route element={<PrivateRoute loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}>
         <Route

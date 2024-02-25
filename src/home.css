@@ -143,3 +143,19 @@ text-decoration:none !important;
 font-family:Arial, Helvetica, sans-serif;
 
 }
+/* Estilos para hacer imágenes responsivas */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajusta el tamaño de las columnas según tus necesidades */
+  grid-gap: 20px; /* Espacio entre las celdas del grid */
+}
+
+.home-item {
+  /* Estilos para los elementos individuales */
+  text-align: center;
+}
+
+.home-item img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+}

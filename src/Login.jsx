@@ -22,7 +22,15 @@ const {
     setShowPassword(!showPassword);
   };
 
- 
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token !== null) {
+      setLoggedIn(true);
+      navigate("/dashboard")
+    } else {
+      setLoggedIn(false); // Asegúrate de establecer loggedIn en false si no hay token
+    }
+  }, [loggedIn]);
 const enviar=(datos)=>{
 
 axios.post('https://noticiasnodejs2.onrender.com/api/v1/login',datos).then((res)=>{

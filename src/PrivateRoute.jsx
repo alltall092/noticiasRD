@@ -12,7 +12,7 @@ const PrivateRoute =({loggedIn, setLoggedIn}) => {
     } else {
       setLoggedIn(false); // Asegúrate de establecer loggedIn en false si no hay token
     }
-  }, []); // Asegúrate de pasar un arreglo vacío como dependencia para que el efecto se ejecute solo una vez
+  }, [loggedIn]); // Asegúrate de pasar un arreglo vacío como dependencia para que el efecto se ejecute solo una vez
 
   
 
@@ -22,9 +22,7 @@ const PrivateRoute =({loggedIn, setLoggedIn}) => {
     return <Navigate to="/login" state={{ from: location }} />;
   }
 
-  if (location.pathname === '/login') {
-    return <Navigate to="/dashboard" />;
-  }
+ 
   // Si el usuario está autenticado y tiene un token válido, mostrar el contenido protegido
   return <Outlet />;
 

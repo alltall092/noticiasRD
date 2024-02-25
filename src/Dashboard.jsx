@@ -52,7 +52,7 @@ const navigate=useNavigate();
   ];
 useEffect(()=>{
 
-axios.get('https://noticiasnodejs2.onrender.com/api/v1/noticias/').then(res=>setNoticias(res.data.imageUrls));
+axios.get('https://noticiasnodejs2.onrender.com/api/v1/noticias/').then(res=>setNoticias(res.data.imageUrls.flat()));
 
 },[]);
   useEffect(() => {
@@ -233,9 +233,7 @@ const handleLogout = () => {
 };
 
 React.useEffect(() => {
-  const results = noticias.filter((item,index) =>
-    item.filter(x=>x.titulo.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
+  const results = noticias.filter(x=>x.titulo.toLowerCase().includes(searchTerm.toLowerCase()));
   setSearchResults(results);
 }, [searchTerm, noticias]);
 
@@ -390,7 +388,7 @@ return(<>
             <div class="dashboard">
             <section class="news-section" style={{ maxHeight: '575px', overflowY: 'auto' }}>
           
-            {searchResults.map(x=>(x.map(p=>(
+            {searchResults.map(p=>(
   
      p.id===p.noticiasId &&(<>
      <article class="news-post" key={p.id} >
@@ -408,7 +406,7 @@ return(<>
       </article>
 
    </>)
-))))}</section>
+))}</section>
   </div>
 
               

@@ -27,10 +27,8 @@ return(<>
    
   </div>
   <div className="container-fluid ct">
-  
-      
-      <div className="conatainer">
-  <div className="row">
+      <div className="conatainer ">
+  <div className="row rows" >
     <div className="col-md-6">
   
       <img
@@ -83,7 +81,7 @@ El Ingenio Boca de Nigua, fue restaurado y forma parte esencial de la ruta de lo
     <div className="container">
 <div className="row">
   <div className="col-md-12">
-<img src="./imagenes/mapa2.jpg" height="400" width="1500"/>
+<img src="./imagenes/mapa2.jpg" className="responsive" height={400} width={1500}/>
 <h3>Ubicacion</h3>
 <p className="parra">El histórico ingenio está localizado en el municipio San Gregorio de Nigua, provincia San Cristóbal, rodeado, al este por el arroyo Agua Dulce y las secciones Ingenio Nuevo y Sainaguá, al norte por el Arroyo Seco y la sección Hatillo y al sur por el mar Caribe.</p>
 </div>

@@ -1,0 +1,37 @@
+/* AudioPlayer.css */
+.audio-player-container {
+  width: 300px;
+  margin: 20px auto;
+}
+
+.audio-player {
+  width: 100%;
+  outline: none;
+}
+
+.audio-player audio {
+  width: 100%;
+}
+
+.playlist {
+  margin-top: 20px;
+}
+
+.playlist h3 {
+  margin-bottom: 5px;
+}
+
+.playlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.playlist li {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.playlist li:hover {
+  background-color: #f0f0f0;
+}
+

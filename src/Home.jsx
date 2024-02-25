@@ -5,7 +5,7 @@ import './home.css';
 import axios from 'axios';
 import { useState,useEffect } from 'react';
 import {useNavigate } from 'react-router-dom';
-
+import ReactAudioPlayer from 'react-audio-player';
 const Home=()=>{
 const [datos,setDatos]=useState([]);
 const [cat,setCat]=useState([]);
@@ -54,7 +54,6 @@ return(<>
 </div>
 <div className="col-md-8 contenedor2">
 
-
     
 </div>
 
@@ -64,7 +63,9 @@ return(<>
 
 </div>
 <div className="container">
+<div>
 
+    </div>
 
 <div className="lookbook-gallery">
       <h2 className="look-hed">Noticias Pricipales</h2>
@@ -94,7 +95,7 @@ j.id===j.noticiasId && (
 
 <p style={{textAlign:"center"}}>{j.name}</p>
 <a href="#" onClick={()=>navegarDetalles(j.id)}>
-<img src={j.url} height="400" width="400" alt="imagenes"/>
+<img src={j.url} height="400" className="image-fluid" width="400" alt="imagenes"/>
 <h6>{j.titulo}</h6>
 </a>
 </div>
