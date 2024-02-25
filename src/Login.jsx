@@ -21,7 +21,7 @@ const {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-
+// redirecionar al dashboard
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token !== null) {
